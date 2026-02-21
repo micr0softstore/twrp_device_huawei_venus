@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_hi6250.mk
+    $(LOCAL_DIR)/twrp_venus.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_hi6250-user \
-    omni_hi6250-userdebug \
-    omni_hi6250-eng
+    twrp_venus-user \
+    twrp_venus-userdebug \
+    twrp_venus-eng
