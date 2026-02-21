@@ -90,3 +90,5 @@ TW_USE_TOOLBOX := true
 # Include logcat
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+TW_NO_HAPTICS := true
+TW_MTP_DEVICE := "Huwei P30 Lite"
