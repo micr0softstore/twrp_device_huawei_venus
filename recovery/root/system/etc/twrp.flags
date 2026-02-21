@@ -1,0 +1,39 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# mount point  fstype device                             device2              	flags
+/boot				        emmc		    /dev/block/mmcblk0p28  	          flags=display="Boot";backup=1;flashimg=1
+/recovery           emmc        /dev/block/mmcblk0p29             flags=display="Recovery";backup=1;flashimg=1
+/data               ext4        /dev/block/mmcblk0p49             flags=display="Data";backup=1
+/dts				        emmc		    /dev/block/mmcblk0p30	            flags=display="DTS";backup=1;flashimg=1
+/persist		        emmc		    /dev/block/mmcblk0p16             flags=display="Persist";backup=1;flashimg=1
+/cache              ext4        /dev/block/mmcblk0p36             flags=display="Cache";backup=1
+
+# Crucial read-only partitions
+/oeminfo            emmc        /dev/block/mmcblk0p8              flags=display="OEMInfo";backup=1;flashimg=1
+/nvme               emmc        /dev/block/mmcblk0p7              flags=display="NVMe";backup=1
+/modemnvm_update    emmc        /dev/block/mmcblk0p21             flags=display="ModemNVM_Update";backup=1
+/modemnvm_system    emmc        /dev/block/mmcblk0p12             flags=display="ModemNVM_System";backup=1
+/modemnvm_img       emmc        /dev/block/mmcblk0p11             flags=display="ModemNVM_Image";backup=1
+/modemnvm_factory   emmc        /dev/block/mmcblk0p6              flags=display="ModemNVM_Factory";backup=1
+/modemnvm_backup    emmc        /dev/block/mmcblk0p10             flags=display="ModemNVM_Backup";backup=1
+/modem_fw			      emmc		    /dev/block/mmcblk0p31	            flags=backup=1;display="Modem_FW"
+
+# System partitions (leave them as ext4 for now)
+/system_root        ext4        /dev/block/mmcblk0p44             flags=display="System";backup=1;flashimg=0
+/vendor             ext4        /dev/block/mmcblk0p47             flags=display="Vendor";backup=1;flashimg=0
+/product            ext4        /dev/block/mmcblk0p48             flags=display="Product";backup=1;flashimg=0
+/cust               ext4        /dev/block/mmcblk0p45             flags=display="Cust";backup=1;flashimg=0
+
+
+
+# Direct image flashings
+/system_image       emmc        /dev/block/mmcblk0p44             flags=display="System";backup=1;flashimg=1
+/vendor_image       emmc        /dev/block/mmcblk0p47             flags=display="Vendor";backup=1;flashimg=1
+/product_image      emmc        /dev/block/mmcblk0p48             flags=display="Product";backup=1;flashimg=1
+/cust_image         emmc        /dev/block/mmcblk0p45             flags=display="Cust";backup=1;flashimg=1
+
+# Removable storage
+/usb_otg			auto 		/dev/block/sde1                    /dev/block/sde             flags=fsflags=utf8;display="USB OTG";storage;wipeingui;removable
+/external_sd		auto 		/dev/block/mmcblk1p1               /dev/block/mmcblk1         flags=fsflags=utf8;display="Micro SD Card";storage;wipeingui;removable
