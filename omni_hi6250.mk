@@ -9,19 +9,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from hi6250 device
-$(call inherit-product, device/unknown/hi6250/device.mk)
+$(call inherit-product, device/huawei/venus/device.mk)
 
-PRODUCT_DEVICE := hi6250
-PRODUCT_NAME := omni_hi6250
-PRODUCT_BRAND := hi6250
-PRODUCT_MODEL := HUAWEI
-PRODUCT_MANUFACTURER := unknown
+PRODUCT_DEVICE := venus
+PRODUCT_NAME := omni_venus
+PRODUCT_BRAND := huawei
+PRODUCT_MODEL := VNS-L21
+PRODUCT_MANUFACTURER := HUAWEI
 
-PRODUCT_GMS_CLIENTID_BASE := android-unknown
+PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="hi6250-user 7.0 NRD90M eng.jenkin.20180725.035207 test-keys"
