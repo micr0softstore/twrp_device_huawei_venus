@@ -5,4 +5,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/unknown/hi6250
+LOCAL_PATH := device/huawei/venus
