@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/unknown/hi6250
+DEVICE_PATH := device/huawei/venus
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -44,8 +44,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x07588000
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CONFIG := hi6250_defconfig
-TARGET_KERNEL_SOURCE := kernel/unknown/hi6250
+TARGET_KERNEL_CONFIG := venus_defconfig
+TARGET_KERNEL_SOURCE := kernel/huawei/venus
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
