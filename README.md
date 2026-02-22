@@ -1,4 +1,11 @@
-# Android device tree for hi6250 HUAWEI (hi6250)
+# TWRP device tree for Huawei P9 Lite (VNS-XXX)
+
+Bugs:
+Can't mount /data
+no matter what reboot you choose jt will always reboot to recovery
+
+Specs:
+Chipset: Kirin 650
 
 ```
 #
