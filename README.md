@@ -2,7 +2,9 @@
 
 Bugs:
 Can't mount /data
-no matter what reboot you choose jt will always reboot to recovery
+no matter what reboot you choose it will always reboot to recovery
+
+battery always says 100%
 
 Specs:
 Chipset: Kirin 650
