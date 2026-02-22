@@ -95,3 +95,5 @@ TW_MTP_DEVICE := "Huawei P9 Lite"
 TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/Battery
 TW_USE_LEGACY_BATTERY_SERVICES := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd_backlight0/brightness
+BOARD_HAS_NO_SELECT_BUTTON := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
