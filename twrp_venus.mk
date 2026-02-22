@@ -16,9 +16,9 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/huawei/venus/device.mk)
 
 PRODUCT_DEVICE := venus
-PRODUCT_NAME := omni_venus
+PRODUCT_NAME := twrp_venus
 PRODUCT_BRAND := huawei
-PRODUCT_MODEL := VNS-L21
+PRODUCT_MODEL := venus
 PRODUCT_MANUFACTURER := HUAWEI
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
