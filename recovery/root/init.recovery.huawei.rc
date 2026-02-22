@@ -2,6 +2,7 @@ import /init.recovery.@{/proc/connectivity/chiptype}.rc
 import /init.recovery.connectivity.rc
 import /init.recovery.balong_modem.rc
 import /init.chip.usb.rc
+
 on early-init
     write /sys/fs/selinux/checkreqprot 0
 
@@ -305,3 +306,10 @@ on property:vold.status=start
     init_user0
     unlock_user0_key
     setprop vold.status end
+
+on late-init
+    setprop sys.usb.controller hisi-usb-otg
+    setprop ro.debuggable 1
+    setprop service.adb.root 1
+    setprop sys.usb.configfs 1
+    setprop sys.usb.config adb
