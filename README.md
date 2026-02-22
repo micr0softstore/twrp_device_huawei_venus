@@ -6,6 +6,8 @@ no matter what reboot you choose it will always reboot to recovery
 
 battery always says 100%
 
+mtp and adb dead
+
 Specs:
 Chipset: Kirin 650
 
